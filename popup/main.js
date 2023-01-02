@@ -4,7 +4,7 @@ function reportError(error) {
     console.error(`Error: ${error.message}`);
 }
 
-function create_peer() {
+async function create_peer() {
     browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
         browser.runtime.sendMessage({
             message: "create_peer",
@@ -20,7 +20,7 @@ function create_peer() {
     })
 }
 
-function connect_peer(id) {
+async function connect_peer(id) {
     browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
         browser.runtime.sendMessage({
             message: "connect_peer",
@@ -31,7 +31,7 @@ function connect_peer(id) {
 }
 
 function listenForClicks() {
-    document.addEventListener("click", (event) => {
+    document.addEventListener("click", async function (event) {
         if (event.target.id == "create_session_button") {
             create_peer();
             return;
@@ -76,7 +76,7 @@ function init() {
                 document.getElementById("peer_controls").classList.remove("visually-hidden");
             }
         }).catch((err) => {
-            console.log(err);
+            console.log("Error:", err);
             document.getElementById("page_forbidden").classList.remove("visually-hidden");
 
         })

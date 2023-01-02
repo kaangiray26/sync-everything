@@ -49,17 +49,18 @@ function handleMessage(request, sender, sendResponse) {
 
     if (request.message == "video found") {
         variables[sender.tab.id] = { "controls": true };
-        return;
+        return
     }
 
     if (request.message == "video not found") {
         variables[sender.tab.id] = { "controls": false };
-        return;
+        return
     }
 
     if (request.message == "variables") {
-        sendResponse(variables[request.tab]);
-        return;
+        console.log(variables[request.tab])
+        sendResponse(variables[request.tab])
+        return
     }
 
     if (request.message == "create_peer") {
@@ -71,7 +72,7 @@ function handleMessage(request, sender, sendResponse) {
         peerjs[request.tab] = {
             "peer": peer,
             "conn": conn,
-        };
+        }
 
         peerjs[request.tab].peer.on("connection", (connection) => {
             peerjs[request.tab].conn = connection
@@ -82,7 +83,7 @@ function handleMessage(request, sender, sendResponse) {
         sendResponse({
             "created": true,
             "peer_id": peer_id
-        });
+        })
         return;
     }
 

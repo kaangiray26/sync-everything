@@ -12,7 +12,7 @@
     ],
     "browser_action": {
         "default_icon": {
-            "24": "icons/24.png"
+            "48": "icons/48.png"
         },
         "default_title": "Sync",
         "default_popup": "/popup/index.html"

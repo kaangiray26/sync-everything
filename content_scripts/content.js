@@ -34,7 +34,6 @@
             seeked_ignore = false
             return
         }
-        console.log("Sending seek event:", video.currentTime);
         browser.runtime.sendMessage({
             message: "seek",
             currentTime: video.currentTime
@@ -65,8 +64,6 @@
     get_videos()
 
     browser.runtime.onMessage.addListener(async function (message) {
-        console.log("Message in content.js!", message);
-
         if (message.obj.type === "play") {
             play_ignore = true;
             video.play()
