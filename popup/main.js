@@ -30,6 +30,15 @@ async function connect_peer(id) {
     })
 }
 
+async function close_peer() {
+    browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+        browser.runtime.sendMessage({
+            message: "close_peer",
+            tab: tabs[0].id
+        })
+    })
+}
+
 function listenForClicks() {
     document.addEventListener("click", async function (event) {
         if (event.target.id == "create_session_button") {
@@ -44,6 +53,10 @@ function listenForClicks() {
             }
             connect_peer(friend_id);
             return;
+        }
+
+        if (event.target.id == "close_button") {
+            close_peer();
         }
     })
 }

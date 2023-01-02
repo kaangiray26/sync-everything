@@ -11,6 +11,11 @@ function handleConn(tab) {
             obj: data,
         })
     })
+    peerjs[tab].conn.on("close", async function (data) {
+        peerjs[tab].peer.destroy()
+        peerjs = {}
+        variables = {}
+    })
 }
 
 
@@ -93,6 +98,14 @@ function handleMessage(request, sender, sendResponse) {
             variables[request.tab].init = true
             handleConn(request.tab)
         });
+        return
+    }
+
+    if (request.message == "close_peer") {
+        console.log("Closing connection...");
+        peerjs[request.tab].peer.disconnect()
+        peerjs = {}
+        variables = {}
     }
 }
 

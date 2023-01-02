@@ -28,19 +28,19 @@
                 <!-- Show peer_id if peer is already initialized -->
                 <div class="d-flex flex-column">
                     <div id="peer_display" class="input-group visually-hidden mb-1">
-                        <span class="input-group-text bi bi-person-circle" id="basic-addon1"></span>
+                        <span class="input-group-text bi bi-person-circle"></span>
                         <input id="peer_id" type="text" class="form-control" placeholder="Peer ID" aria-label="Peer ID"
                             aria-describedby="basic-addon1" readonly>
                     </div>
                     <div id="friend_display" class="input-group visually-hidden">
-                        <span class="input-group-text bi bi-universal-access" id="basic-addon2"></span>
+                        <span class="input-group-text bi bi-universal-access"></span>
                         <input id="friend_id" type="text" class="form-control" placeholder="Friend ID"
                             aria-label="Friend ID" aria-describedby="basic-addon2">
                         <button id="connect_button" class="btn btn-primary">Connect</button>
                     </div>
-                    <div id="peer_controls" class="input-group visually-hidden">
-                        <span class="input-group-text bi bi-wifi" id="basic-addon1"></span>
-                        <button class="btn btn-danger">Close</button>
+                    <div id="peer_controls" class="input-group justify-content-end visually-hidden">
+                        <span class="input-group-text text-success fw-bold bi bi-wifi"></span>
+                        <button id="close_button" class="btn btn-danger">Close</button>
                     </div>
                 </div>
             </div>
