@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="card text-bg-dark">
+        <div class="card-header">Sync</div>
+        <div class="card-body">
+            <!-- Show on no video error -->
+            <div id="video_error" class="alert alert-danger visually-hidden my-0" role="alert">
+                No video available on this page!
+            </div>
+            <!-- Show on forbidden pages -->
+            <div id="page_forbidden" class="alert alert-danger visually-hidden my-0" role="alert">
+                Forbidden on this page!
+            </div>
+            <!-- Show controls if video is found -->
+            <div id="controls" class="visually-hidden">
+                <!-- Hide create session button if peer is already initialized -->
+                <button id="create_session_button" class="btn btn-light">Create Session</button>
+                <!-- Show peer_id if peer is already initialized -->
+                <div class="d-flex flex-column">
+                    <div id="peer_display" class="input-group visually-hidden mb-1">
+                        <span class="input-group-text bi bi-person-circle" id="basic-addon1"></span>
+                        <input id="peer_id" type="text" class="form-control" placeholder="Peer ID" aria-label="Peer ID"
+                            aria-describedby="basic-addon1" readonly>
+                    </div>
+                    <div id="friend_display" class="input-group visually-hidden">
+                        <span class="input-group-text bi bi-universal-access" id="basic-addon2"></span>
+                        <input id="friend_id" type="text" class="form-control" placeholder="Friend ID"
+                            aria-label="Friend ID" aria-describedby="basic-addon2">
+                        <button id="connect_button" class="btn btn-primary">Connect</button>
+                    </div>
+                    <div id="peer_controls" class="input-group visually-hidden">
+                        <span class="input-group-text bi bi-wifi" id="basic-addon1"></span>
+                        <button class="btn btn-danger">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+</body>
+
+</html>

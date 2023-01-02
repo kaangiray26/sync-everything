@@ -1,0 +1,23 @@
+{
+    "description": "A Firefox Extension to Sync All Videos ",
+    "manifest_version": 2,
+    "name": "Sync",
+    "version": "1.0",
+    "homepage_url": "https://github.com/kaangiray26/sync_ext",
+    "icons": {
+        "48": "icons/48.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "browser_action": {
+        "default_icon": {
+            "24": "icons/24.png"
+        },
+        "default_title": "Sync",
+        "default_popup": "/popup/index.html"
+    },
+    "background": {
+        "page": "background.html"
+    }
+}
