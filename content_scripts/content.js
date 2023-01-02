@@ -67,19 +67,19 @@
     browser.runtime.onMessage.addListener(async function (message) {
         console.log("Message in content.js!", message);
 
-        if (message.command === "play") {
+        if (message.obj.type === "play") {
             play_ignore = true;
             video.play()
         }
 
-        if (message.command === "pause") {
+        if (message.obj.type === "pause") {
             pause_ignore = true;
             video.pause()
         }
 
-        if (message.command === "seek") {
+        if (message.obj.type === "seek") {
             seeked_ignore = true;
-            video.currentTime = message.currentTime;
+            video.currentTime = message.obj.value;
         }
     });
 

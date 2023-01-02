@@ -8,7 +8,7 @@ let variables = {}
 function handleConn(tab) {
     peerjs[tab].conn.on("data", async function (data) {
         browser.tabs.sendMessage(tab, {
-            command: data.type
+            obj: data,
         })
     })
 }
