@@ -1,5 +1,5 @@
 {
-    "description": "A Firefox Extension to Sync All Videos ",
+    "description": "A Firefox Extension to Sync All Videos",
     "manifest_version": 2,
     "name": "Sync",
     "version": "1.0",
