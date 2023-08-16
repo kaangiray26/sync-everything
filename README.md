@@ -9,4 +9,4 @@ A Firefox Extension to synchronize video playback between P2P devices
 
 ### Install
 Install from the official extension store:
-[Firefox](https://addons.mozilla.org/en-US/firefox/addon/sync_everything/)
+[Firefox](https://addons.mozilla.org/en-US/firefox/addon/sync-everything/)
