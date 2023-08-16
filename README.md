@@ -1,6 +1,6 @@
 ![](icons/48.png)
-# Sync Extension
-A Firefox Extension to Sync All Videos 
+# Sync Everything
+A Firefox Extension to synchronize video playback between P2P devices
 
 ### Features
 * Play/pause actions
@@ -9,4 +9,4 @@ A Firefox Extension to Sync All Videos
 
 ### Install
 Install from the official extension store:
-[Firefox](https://addons.mozilla.org/en-US/firefox/addon/sync_ext/)
+[Firefox](https://addons.mozilla.org/en-US/firefox/addon/sync_everything/)
